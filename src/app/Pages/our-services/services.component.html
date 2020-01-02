@@ -1,0 +1,22 @@
+<h2 class="text-center">We Offer So Many Services!</h2>
+<div class="card-container">
+  <mat-card class="card">
+    <mat-card-title class="text-center">Maintenance</mat-card-title>
+    <mat-list>
+      <mat-list-item *ngFor="let maintenance of maintenanceOptions">{{maintenance}}</mat-list-item>
+    </mat-list>
+  </mat-card>
+  <mat-card class="card">
+    <mat-card-title class="text-center">Handyman</mat-card-title>
+    <mat-list>
+      <mat-list-item *ngFor="let handy of handyManOptions">{{handy}}</mat-list-item>
+    </mat-list>
+  </mat-card>
+  <mat-card class="card">
+    <mat-card-title class="text-center">Remodel</mat-card-title>
+    <mat-list>
+      <mat-list-item *ngFor="let remodel of remodelOptions">{{remodel}}</mat-list-item>
+    </mat-list>
+  </mat-card>
+
+</div>
