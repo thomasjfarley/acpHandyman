@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HandyButtonModule} from './Materials/handy-button/handy-button.module';
 import {AcpCardsModule} from './Cards/acp-cards.module';
 import {PagesModule} from './Pages/pages.module';
+import {MatButtonModule, MatMenuModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,8 @@ import {PagesModule} from './Pages/pages.module';
     HandyButtonModule,
     AcpCardsModule,
     PagesModule,
+    MatButtonModule,
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

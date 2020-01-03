@@ -1,17 +1,15 @@
 <!-- Toolbar -->
 <div class="toolbar" role="banner" style="position: fixed">
-  <handy-button class="mobile-menu" [icon]="'fa-bars'"></handy-button>
+  <button class="mobile-menu" mat-button [matMenuTriggerFor]="menu"> <i class="fas fa-bars"></i> </button>
+  <mat-menu #menu="matMenu">
+    <button *ngFor="let item of menuItems" class="text-center" mat-menu-item style="width: 100vw">{{item}}</button>
+  </mat-menu>
   <div  class="d-flex flex-row justify-content-center handy-title">
     <header class="text-center" style="text-transform: uppercase; font-size: large">ACP Handyman and Home Improvement!</header>
   </div>
 </div>
 <div class="d-inline-flex justify-content-end pr-4 menu">
-  <handy-button [label]="'Home'"></handy-button>
-  <handy-button [label]="'Services'"></handy-button>
-  <handy-button [label]="'Epoxy'"></handy-button>
-  <handy-button [label]="'Reviews'"></handy-button>
-  <handy-button [label]="'Our Work'"></handy-button>
-  <handy-button [label]="'Contact'"></handy-button>
+  <handy-button *ngFor="let item of menuItems" [label]="item"></handy-button>
 </div>
 
 <div class="content home-image" role="main">
