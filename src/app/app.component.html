@@ -1,15 +1,15 @@
 <!-- Toolbar -->
 <div class="toolbar" role="banner" style="position: fixed">
-  <button class="mobile-menu" mat-button [matMenuTriggerFor]="menu"> <i class="fas fa-bars"></i> </button>
+  <button class="mobile-menu" mat-button [matMenuTriggerFor]="menu"> <i class="fas fa-bars" ></i> </button>
   <mat-menu #menu="matMenu">
-    <button *ngFor="let item of menuItems" class="text-center" mat-menu-item style="width: 100vw">{{item}}</button>
+    <button *ngFor="let item of menuItems" class="text-center" mat-menu-item style="width: 100vw" (click)="page = item">{{item}}</button>
   </mat-menu>
   <div  class="d-flex flex-row justify-content-center handy-title">
     <header class="text-center" style="text-transform: uppercase; font-size: large">ACP Handyman and Home Improvement!</header>
   </div>
 </div>
 <div class="d-inline-flex justify-content-end pr-4 menu">
-  <handy-button *ngFor="let item of menuItems" [label]="item"></handy-button>
+  <handy-button *ngFor="let item of menuItems" [label]="item" (click)="page = item"></handy-button>
 </div>
 
 <div class="content home-image" role="main">
@@ -18,8 +18,8 @@
 
 </div>
 <div class="content" role="main">
-  <home></home>
-  <services class="w-100"></services>
+  <home *ngIf="page === 'Home'"></home>
+  <services *ngIf="page === 'Services'" class="w-100"></services>
   <!-- Links -->
   <div class="card-container">
     <a class="circle-link" title="Animations" href="https://angular.io/guide/animations" target="_blank" rel="noopener">

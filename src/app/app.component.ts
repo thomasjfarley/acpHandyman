@@ -7,7 +7,8 @@ import {Component, OnInit} from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'acp';
-  menuItems: string[] = ['Homes', 'Services', 'Epoxy', 'Reviews', 'Our Work', 'Contact'];
+  menuItems: string[] = ['Home', 'Services', 'Epoxy', 'Reviews', 'Our Work', 'Contact'];
+  page = 'Home';
 
   ngOnInit() {
     console.log(this.menuItems);

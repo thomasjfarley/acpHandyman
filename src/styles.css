@@ -274,3 +274,7 @@ footer a {
   display: none;
 }
 
+::ng-deep.mat-menu-panel {
+  max-width: none !important;
+}
+
